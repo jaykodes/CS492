@@ -13,49 +13,6 @@ body {
 	animation: fadein 3s;
 }
 
-header {
-	z-index: 2;
-	position: fixed;
-	left: 0;
-    right: 0;
-    background-color: #000;
-	opacity: 90%;
-	margin: 0em;
-}
-
-ul {
-	list-style: none;
-}
-
-nav ul {
-	margin: 0;
-	padding: 0;
-}
-
-nav li {
-	display: inline-block;
-	margin: 1em;
-}
-
-nav a {
-	text-decoration: none;
-	text-transform: uppercase;
-	color: #fff;
-	transition: all ease-in-out 350ms;
-}
-
-nav a:hover,
-nav a:focus {
-	color: #ffd700;
-}
-
-.right-nav {
-	float: right;
-	font-size: .85rem;
-	padding: .5em;
-	font-weight: 300;
-}
-
 .container {
 	width: 100%;
 	height: 100vh;
@@ -75,72 +32,376 @@ nav a:focus {
 	scroll-snap-align: start;
 }
 
-.slides img {
-	width: 350px;
+/* Init */
+.slides-init {
+	background: #fff;
 }
 
-.slides h2 {
+.slides-init h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 800px;
+	color: #000;
+}
+
+.slides-init h1 {
+	font-weight: 100;
+	font-size: 25px;
+	color: #000;
+}
+
+.init-text {
+	text-align: justify;
+}
+
+.init-text p {
+	line-height: 1.5rem;
+	color: #000;
+}
+
+/* Introduction */
+.slides-intro {
+	background: #000;
+}
+
+.slides-intro h2 {
 	font-size: 70px;
 	font-weight: 600;
 	max-width: 650px;
 }
 
-.slide1 {
-	background: linear-gradient(454deg, #4f4080, #9553ff);
+.slides-intro h1 {
+	font-weight: 100;
+	font-size: 25px;
 }
 
-.slide2 {
-	background: linear-gradient(454deg, #404c80, #53ff88);
+.slides-intro img {
+	width: 450px;
+	margin-left: 70px;
+	filter: grayscale();
+	border-radius: 30px;
+	border: 5px solid white;
 }
 
-.slide3 {
-	background: linear-gradient(454deg, #9574ff, #ff5353);
-}
-
-.slide4 {
-	background: linear-gradient(454deg, #4f4080, #9553ff);
-}
-
-.template1-text {
+.intro-text {
 	width: 400px;
 	text-align: justify;
 }
 
-.template1-text p {
+.intro-text p {
 	line-height: 1.5rem;
 }
 
-.template2-text {
+/* Traffic Intro */
+.slides-traffic-intro {
+	background: #fff;
+}
+
+.slides-traffic-intro h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 650px;
+	color: #000;
+}
+
+.slides-traffic-intro img {
+	width: 500px;
+	filter: grayscale();
+	border-radius: 30px;
+	border: 4px solid grey;
+}
+
+.traffic-intro-text {
 	width: 400px;
-	text-align: justify;
 }
 
-.template2-text p {
+.traffic-intro-text p {
 	line-height: 1.5rem;
+	color: #000;
 }
 
-.template3-text {
+/* Traffic Graph 1 */
+.slides-traffic-graph-1 {
+	background: #000;
+}
+
+.slides-traffic-graph-1 h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 800px;
+}
+
+.traffic-graph-1-text {
 	width: 900px;
-	text-align: justify;
 }
 
-.template3-text p {
+.traffic-graph-1-text p {
 	margin-top: 10px;
 	line-height: 1.5rem;
 	margin-bottom: 10px;
 }
 
-.template4-text {
-	width: 900px;
-	text-align: justify;
+.traffic-graph-1-chartBox {
+	background: #000;
 }
 
-.template4-text p {
-	margin-top: 10px;
+/* Traffic Graph 2 */
+.slides-traffic-graph-2 {
+	background: #fff;
+}
+
+.slides-traffic-graph-2 h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 650px;
+	color: #000;
+}
+
+.traffic-graph-2-text {
+	width: 400px;
+	text-align: justify;
+	color: #000;
+}
+
+.traffic-graph-2-chartBox {
+	background: #fff;
+	width: 500px;
+}
+
+/* Compas Intro */
+.slides-compas-intro {
+	background: #000;
+}
+
+.slides-compas-intro h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 650px;
+}
+
+.slides-compas-intro img {
+	width: 350px;
+	filter: grayscale();
+	border-radius: 30px;
+	border: 4px solid white;
+}
+
+.compas-intro-text {
+	width: 400px;
+}
+
+.compas-intro-text p {
 	line-height: 1.5rem;
 }
 
-.template4-text img {
+/* Compas Graph 1 */
+.slides-compas-graph-1 {
+	background: #fff;
+}
+
+.slides-compas-graph-1 h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 900px;
+	color: #000;
+}
+
+.compas-graph-1-text {
+	width: 900px;
+	text-align: justify;
+	color: #000;
+}
+
+.compas-graph-1-text p {
 	margin-top: 10px;
+	line-height: 1.5rem;
 	margin-bottom: 10px;
+}
+
+.compas-graph-1-chartBox {
+	background: #fff;
+}
+
+/* Profiling Intro */
+.slides-profiling-intro {
+	background: #000;
+}
+
+.slides-profiling-intro h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 650px;
+}
+
+.slides-profiling-intro img {
+	width: 430px;
+	height: 300px;
+	object-fit: cover;
+	filter: grayscale();
+	border-radius: 30px;
+	border: 5px darkgrey solid;
+}
+
+.profiling-intro-text {
+	width: 400px;
+}
+
+.profiling-intro-text p {
+	line-height: 1.5rem;
+}
+
+/* Profiling Graph 1 */
+.slides-profiling-graph-1 {
+	background: #fff;
+}
+
+.slides-profiling-graph-1 h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 650px;
+	color: #000;
+}
+
+.profiling-graph-1-text {
+	width: 400px;
+	color: #000;
+}
+
+.profiling-graph-1-chartBox {
+	background: #fff;
+	width: 500px;
+}
+
+/* Profiling Graph 2 */
+.slides-profiling-graph-2 {
+	background: #000;
+}
+
+.slides-profiling-graph-2 h2 {
+	font-size: 60px;
+	font-weight: 600;
+	max-width: 900px;
+}
+
+.profiling-graph-2-text {
+	width: 900px;
+}
+
+.profiling-graph-2-text p {
+	margin-top: 10px;
+	line-height: 1.5rem;
+	margin-bottom: 10px;
+}
+
+.profiling-graph-2-chartBox {
+	background: #000;
+}
+
+/* Quiz */
+.slides-quiz {
+	background: #fff;
+}
+
+.slides-quiz h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 800px;
+	color: #000;
+}
+
+.init-text {
+	text-align: justify;
+}
+
+.app {
+	background: #fff;
+	width: 100%;
+	max-width: 600px;
+	margin: 30px auto 0;
+	border-radius: 10px;
+	padding: 40px;
+	border: 2px solid #000;
+}
+
+.app h1 {
+	font-size: 25px;
+	color: #000;
+	font-weight: 600;
+	border-bottom: 1px solid #000;
+	padding-bottom: 20px;
+}
+
+.quiz {
+	padding-top: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+}
+
+.btn {
+	background: #fff;
+	color: #000;
+	font-weight: 500;
+	width: 100%;
+	border: 1px solid #000;
+	padding: 10px;
+	margin: 10px 0;
+	text-align: left;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s;
+	font-size: 15px;
+}
+
+.btn:hover:not([disabled]) {
+	background: #000;
+	color: #fff;
+}
+
+.btn:disabled {
+	cursor: no-drop;
+}
+
+#next-btn {
+	background: #000;
+	color: #fff;
+	font-weight: 500;
+	width: 150px;
+	border: 0;
+	padding: 10px;
+	margin: 20px auto 0;
+	border-radius: 4px;
+	cursor: pointer;
+	display: block;
+	transition: all 0.3s;
+	font-size: 15px;
+}
+
+.correct {
+	background: #00ff6c;
+	color: #000;
+}
+
+.incorrect {
+	background: #ff1a1a;
+	color: #000;
+}
+
+/* References */
+.slides-references {
+	background: #000;
+}
+
+.slides-references h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 800px;
+}
+
+.references-text {
+	text-align: justify;
+}
+
+.references-text p {
+	line-height: 1.5rem;
 }
