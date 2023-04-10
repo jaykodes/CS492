@@ -6,57 +6,167 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<header>
-            <nav>
-            	<div class="right-nav">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Quiz</a></li>
-					</ul>
-				</div>
-			</nav>
-        </header>
-        <section class="home">
+		<section class="home">
         	<div class="container">
-        		<section class="template1">
-        			<div class="slides slide1">
-						<img src="images/pic-1.png">
-						<div class="template1-text">
-							<h2>Template 1</h2>
+        		<section class="init">
+        			<div class="slides slides-init">
+						<div class="init-text">
+							<h2>CS 492 Final Project</h2>
 							<br>
-							<p>This is template 1. This template should ideally follow the format of having an image to the left with a title / paragraph on the right. The paragraph will be underneath the title.</p>
+							<h1>Jay and Uzair</h1>
 						</div>
 					</div>
         		</section>
-        		<section class="section2">
-        			<div class="slides slide2">
-						<div class="template2-text">
-							<h2>Template 2</h2>
+        		<section class="introduction">
+        			<div class="slides slides-intro">
+						<div class="intro-text">
+							<h2>Visualizations of Biases</h2>
 							<br>
-							<p>This is template 2. This template should ideally follow the format of having an image to the right with a title / paragraph on the left. The paragraph will be underneath the title.</p>
+							<h1>From Profiling to Prison</h1>
 						</div>
-						<img src="images/pic-1.png">
+						<img src="images/racial.jpeg">
 					</div>
         		</section>
-        		<section class="section3">
-        			<div class="slides slide3">
-						<div class="template3-text">
-							<h2>Template 3</h2>
-							<p>This is template 3. This template should ideally follow the format of having an image on the bottom with a title / paragraph on the top. The paragraph will be underneath the title.</p>
-							<img src="images/pic-1.png">
-						</div>
-					</div>
-        		</section>
-        		<section class="section4">
-        			<div class="slides slide4">
-						<div class="template4-text">
-							<h2>Template 4</h2>
-							<img src="images/pic-1.png">
-							<p>This is template 4. This template should ideally follow the format of having a title at the top, followed by an image, followed by text. The paragraph will be underneath the image.</p>
+        		<section class="traffic-intro">
+        			<div class="slides slides-traffic-intro">
+        				<img src="images/traffic_stop.png">
+						<div class="traffic-intro-text">
+							<h2>Traffic Stops</h2>
+							<br>
+							<p>Biases can emerge in things as routine as a traffic stop. Regardless of the reason for the stop, African Americans were far more likely to be arrested. For this project, we would like you to step into the shoes of a young African American man named Caleb from Rhode Island, who is subject to a routine traffic stop.</p>
 						</div>
 					</div>
         		</section>
-			</div>
+        		<section class="traffic-graph-1">
+        			<div class="slides slides-traffic-graph-1">
+						<div class="traffic-graph-1-text">
+							<h2>Chances of Arrest at Traffic Stop</h2>
+							<p>Based on his demographics, Caleb is far more likely to be arrested for a traffic stop than a person of any other gender or race, based on the data available for Rhode Island. (Source: Stanford University)</p>
+							<div class="traffic-graph-1-chartBox">
+								<canvas id="myChart"></canvas>
+								<select onchange="genderBasedData(this)">
+									<option value ="Male">Male</option>
+									<option value ="Female">Female</option>
+								</select>
+								<input type="checkbox" checked="" value = "0" onclick="updateChart(this)"> Speeding
+								<input type="checkbox" checked="" value = "1" onclick="updateChart(this)"> Equipment
+								<input type="checkbox" checked="" value = "2" onclick="updateChart(this)"> Registration/Plate
+								<input type="checkbox" checked="" value = "1" onclick="updateChart(this)"> Other Reason
+							</div>
+						</div>
+					</div>
+        		</section>
+        		<section class="traffic-graph-2">
+        			<div class="slides slides-traffic-graph-2">
+        				<div class="traffic-graph-2-chartBox">
+        					<canvas id="polarChart"></canvas>
+        				</div>
+						<div class="traffic-graph-2-text">
+							<h2>Traffic Stop Outcomes</h2>
+							<br>
+							<p>While traffic stops rarely lead to arrests, Caleb is far more likely to experience harsh punishments due to his race. (Source: Stanford University)</p>
+						</div>
+					</div>
+        		</section>
+        		<section class="compas-intro">
+        			<div class="slides slides-compas-intro">
+						<div class="compas-intro-text">
+							<h2>COMPAS</h2>
+							<br>
+							<p>Unfortunately for Caleb, being arrested isn’t the end of his troubles. His Judge uses a software known as COMPAS, to help her decide how likely he is to commit another driving infraction. Unsurprisingly, she sees that Caleb has a higher likelihood of being violence, recidivism, and failing to appear in court.</p>
+						</div>
+						<img src="images/intro_pic.webp">
+					</div>
+        		</section>
+        		<section class="compas-graph-1">
+        			<div class="slides slides-compas-graph-1">
+						<div class="compas-graph-1-text">
+							<h2>COMPAS Score by Race</h2>
+							<br>
+							<p>(Source: ProPublica)</p>
+							<div class="compas-graph-1-chartBox">
+								<canvas id="myChart_compas"></canvas>
+								<select onchange="genderBasedData_compas(this)">
+									<option value ="Male">Male</option>
+									<option value ="Female">Female</option>
+								</select>
+								<input type="checkbox" checked="" value = "0" onclick="updateChart_compas(this)"> Violence
+								<input type="checkbox" checked="" value = "1" onclick="updateChart_compas(this)"> Recidivism
+								<input type="checkbox" checked="" value = "2" onclick="updateChart_compas(this)"> Failure to Appear
+							</div>
+						</div>
+					</div>
+        		</section>
+        		<section class="profiling-intro">
+        			<div class="slides slides-profiling-intro">
+        				<img src="images/profile.jpeg">
+						<div class="profiling-intro-text">
+							<h2>Racial Profiling</h2>
+							<br>
+							<p>The problems that Caleb has starts with racial profiling. The reason Caleb is racially profiled is because African Americans tend to be prosecuted and convicted more, despite being underrepresented in the population. This creates a situation where people like Caleb are more likely to be arrested based on biases, and causes a vicious cycle.</p>
+						</div>
+					</div>
+        		</section>
+        		<section class="profiling-graph-1">
+        			<div class="slides slides-profiling-graph-1">
+						<div class="profiling-graph-1-text">
+							<h2>Number of Convictions by Race</h2>
+							<br>
+							<br>
+							<p> (Source: Government of UK)
+						</div>
+						<div class="profiling-graph-1-chartBox">
+        					<canvas id="myChart_profiling"></canvas>
+        				</div>
+					</div>
+        		</section>
+        		<section class="profiling-graph-2">
+        			<div class="slides slides-profiling-graph-2">
+						<div class="profiling-graph-2-text">
+							<h2>Ratio of Searches Conducted at Traffic Stops by Race</h2>
+							<br>
+							<p>(Source: Municipality of Austin, Texas)</p>
+							<div class="profiling-graph-2-chartBox">
+								<canvas id="myChart_search"></canvas>
+							</div>
+						</div>
+					</div>
+        		</section>
+        		<section class="quiz">
+        			<div class="slides slides-quiz">
+						<div class="quiz-text">
+							<h2>Quiz</h2>
+							<div class="app">
+								<div class="quiz">
+									<h1 id="question">Question goes here</h1>
+									<div id="answer-buttons">
+										<button class="btn">Answer 1</button>
+										<button class="btn">Answer 2</button>
+										<button class="btn">Answer 3</button>
+										<button class="btn">Answer 4</button>
+									</div>
+									<button id="next-btn">Next</button>
+								</div>
+							</div>
+						</div>
+					</div>
+        		</section>
+        		<section class="references">
+        			<div class="slides slides-references">
+						<div class="references-text">
+							<h2>References</h2>
+							<br>
+							<p>[1] Loren Iporsm</p>
+						</div>
+					</div>
+        		</section>
+        	</div>
         </section>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+        <script type="text/javascript" src="javascript/traffic_graph.js"></script>
+        <script type="text/javascript" src="javascript/compas_graph.js"></script>
+        <script type="text/javascript" src="javascript/profiling_graph.js"></script>
+        <script type="text/javascript" src="javascript/search_graph.js"></script>
+        <script type="text/javascript" src="javascript/quiz.js"></script>
 	</body>
 </html>
