@@ -402,6 +402,8 @@ body {
 	text-align: justify;
 }
 
-.references-text p {
+.references-text a {
 	line-height: 1.5rem;
+	text-decoration: none;
+	color: #fff;
 }
