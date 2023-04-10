@@ -406,4 +406,14 @@ body {
 	line-height: 1.5rem;
 	text-decoration: none;
 	color: #fff;
+	outline: none;
+	border: 0;
+}
+
+.references-text a:hover, a:active, a:focus {
+	line-height: 1.5rem;
+	text-decoration: none;
+	color: #fff;
+	outline: none;
+	border: 0;
 }
