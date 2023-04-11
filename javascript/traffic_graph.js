@@ -807,7 +807,7 @@ const data2 = {
     'N/D'
   ],
   datasets: [{
-    label: 'My First Dataset',
+    label: '',
     data: [2521, 320, 617, 7685, 5129, 606],
     backgroundColor: [
       'rgb(255, 99, 132)',

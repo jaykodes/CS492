@@ -387,15 +387,32 @@ body {
 	color: #000;
 }
 
+/* Conclusion */
+.slides-conclusion {
+	background: #000;
+}
+
+.slides-conclusion h2 {
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 800px;
+	color: #fff;
+}
+
+.conclusion-text {
+	text-align: justify;
+}
+
 /* References */
 .slides-references {
-	background: #000;
+	background: #fff;
 }
 
 .slides-references h2 {
 	font-size: 70px;
 	font-weight: 600;
 	max-width: 800px;
+	color: #000;
 }
 
 .references-text {
@@ -405,5 +422,5 @@ body {
 .references-text a {
 	line-height: 1.5rem;
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 }
